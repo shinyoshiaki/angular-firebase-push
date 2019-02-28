@@ -4,5 +4,34 @@
   min-height: 95vh;
 }
 .footer {
-  margin-top: auto;
+  position: absolute;
+  bottom: -70px;
+  height: 70px;
+  width: 100%;
+}
+
+.msg,
+.toolbar,
+form {
+  display: flex;
+}
+
+header,
+.messages,
+blockquote {
+  padding: 0.5em;
+}
+
+.msg {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.messages {
+  flex: 1;
+  overflow: auto;
+}
+
+.msg--them {
+  justify-content: flex-end;
 }

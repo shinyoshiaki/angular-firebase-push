@@ -1,0 +1,25 @@
+.msg,
+.toolbar,
+form {
+  display: flex;
+}
+
+header,
+.messages,
+blockquote {
+  padding: 0.5em;
+}
+
+.msg {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.messages {
+  flex: 1;
+  overflow: auto;
+}
+
+.msg--them {
+  justify-content: flex-end;
+}

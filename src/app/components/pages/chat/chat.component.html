@@ -2,18 +2,16 @@
   <div>
     <p>user:{{ this.uid }}</p>
     <p>target:{{ this.room }}</p>
-    <div style="display: flex;justify-content: space-between">
-      <div>
-        <app-chat-message
-          *ngFor="let message of messages"
-          [message]="message"
-          [self]="isSelf(message)"
-          style="margin:5px"
-        ></app-chat-message>
-      </div>
+    <div class="messages" style="height:90vh;overflow:auto;">
+      <app-chat-message
+        *ngFor="let message of messages"
+        [message]="message"
+        [self]="isSelf(message)"
+        style="margin:5px"
+      ></app-chat-message>
     </div>
   </div>
-  <div class="footer" style="display: flex">
+  <div class="footer" style="display: flex;background: white;height: 50px;">
     <mat-form-field style="flex:1">
       <input
         matInput

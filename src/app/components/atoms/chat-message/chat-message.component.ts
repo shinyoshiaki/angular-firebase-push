@@ -11,8 +11,9 @@ import sha1 from "sha1";
 export class ChatMessageComponent implements OnInit {
   @Input() message: Message;
   @Input() self: boolean;
-  
+
   avatar: string;
+  name: string;
   constructor() {}
 
   ngOnInit() {
@@ -22,6 +23,7 @@ export class ChatMessageComponent implements OnInit {
     }).toString();
     console.log("avatar", this.avatar);
     this.avatar = `data:image/png;base64,${avatar}`;
+    this.name = this.self ? "me" : this.message.sender;
   }
 
   getTime() {
