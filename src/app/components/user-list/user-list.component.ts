@@ -1,10 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { Router } from "@angular/router";
-import {
-  AngularFirestore,
-  AngularFirestoreCollection
-} from "@angular/fire/firestore";
+import { AngularFirestore } from "@angular/fire/firestore";
 
 @Component({
   selector: "app-user-list",

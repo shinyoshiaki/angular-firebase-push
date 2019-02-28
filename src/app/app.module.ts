@@ -6,7 +6,8 @@ import {
   MatCheckboxModule,
   MatInputModule,
   MatCardModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatTabsModule
 } from "@angular/material";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -23,13 +24,15 @@ import { ChatComponent } from "./components/chat/chat.component";
 import { PushPermissionService } from "./services/push-permission.service";
 import { AngularFireMessagingModule } from "@angular/fire/messaging";
 import { AsyncPipe } from "@angular/common";
+import { MainComponent } from "./components/main/main.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserListComponent,
-    ChatComponent
+    ChatComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { AsyncPipe } from "@angular/common";
     MatInputModule,
     MatCardModule,
     MatSnackBarModule,
+    MatTabsModule,
     AngularFireMessagingModule
   ],
   providers: [AngularFirestore, PushPermissionService, AsyncPipe],

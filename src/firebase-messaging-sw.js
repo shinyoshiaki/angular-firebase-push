@@ -18,7 +18,7 @@ messaging.setBackgroundMessageHandler(function(payload) {
   console.log("serviceworker recieved", payload);
 
   const notificationTitle = "notification";
-  const { sender, text } = payload.notification.body;
+  const { sender, text } = JSON.parse(payload.notification.body);
   const notificationOptions = {
     body: `message "${text}" from ${sender}`,
     icon: payload.notification.icon
