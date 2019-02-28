@@ -1,0 +1,1 @@
+https://shinyoshiaki.github.io/angular-push/

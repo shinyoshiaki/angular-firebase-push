@@ -1,0 +1,22 @@
+<div class="body">
+  <div>
+    <p>user:{{ this.uid }}</p>
+    <p>target:{{ this.room }}</p>
+    <div style="display: flex;justify-content: space-between">
+      <div>
+        <p *ngFor="let message of myMessages">{{ message.text }}</p>
+      </div>
+      <div>
+        <p *ngFor="let message of targetMessages">{{ message.text }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <mat-form-field>
+      <input matInput [(ngModel)]="text" placeholder="text" />
+    </mat-form-field>
+    <button mat-button (click)="send()">
+      send
+    </button>
+  </div>
+</div>

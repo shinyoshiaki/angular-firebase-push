@@ -1,0 +1,75 @@
+{
+  "configVersion": 1,
+  "index": "/angular-firebase-push/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/angular-firebase-push/es2015-polyfills.4a4cfea0ce682043f4e9.js",
+        "/angular-firebase-push/favicon.ico",
+        "/angular-firebase-push/firebase-messaging-sw.js",
+        "/angular-firebase-push/index.html",
+        "/angular-firebase-push/main.8a4402fb1d670bd13625.js",
+        "/angular-firebase-push/polyfills.407a467dedb63cfdd103.js",
+        "/angular-firebase-push/runtime.a5dd35324ddfd942bef1.js",
+        "/angular-firebase-push/styles.8d6217f60584bf214774.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/angular-firebase-push/assets/icons/icon-128x128.png",
+        "/angular-firebase-push/assets/icons/icon-144x144.png",
+        "/angular-firebase-push/assets/icons/icon-152x152.png",
+        "/angular-firebase-push/assets/icons/icon-192x192.png",
+        "/angular-firebase-push/assets/icons/icon-384x384.png",
+        "/angular-firebase-push/assets/icons/icon-512x512.png",
+        "/angular-firebase-push/assets/icons/icon-72x72.png",
+        "/angular-firebase-push/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/angular-firebase-push/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/angular-firebase-push/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/angular-firebase-push/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/angular-firebase-push/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/angular-firebase-push/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/angular-firebase-push/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/angular-firebase-push/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/angular-firebase-push/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/angular-firebase-push/es2015-polyfills.4a4cfea0ce682043f4e9.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
+    "/angular-firebase-push/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/angular-firebase-push/firebase-messaging-sw.js": "11b93cc14941bce33ae7477bd932b73d747faa1f",
+    "/angular-firebase-push/index.html": "797e9e23fcd1ace3c77aab32082621a0ffa4dedb",
+    "/angular-firebase-push/main.8a4402fb1d670bd13625.js": "be190f4f6d223ed44b1027bdef651193677ef58c",
+    "/angular-firebase-push/polyfills.407a467dedb63cfdd103.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
+    "/angular-firebase-push/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/angular-firebase-push/styles.8d6217f60584bf214774.css": "74d0a6e7c598f1b27d9f64ae6a38b6e6a6285b48"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

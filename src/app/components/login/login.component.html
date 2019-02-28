@@ -1,0 +1,29 @@
+<div class="center-vertical" *ngIf="(user | async) || {} as user">
+  <mat-card *ngIf="!user.uid" style="width: 300px">
+    <div style="text-align: center">
+      <button mat-button (click)="loginWithGoogle()">Login With Google</button>
+      <button mat-button (click)="loginAnonymously()">Login Anonymously</button>
+    </div>
+    <div style="display: flex;flex-direction: column">
+      <mat-form-field>
+        <input matInput type="email" [(ngModel)]="email" placeholder="email" />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          type="password"
+          [(ngModel)]="password"
+          placeholder="password"
+        />
+      </mat-form-field>
+      <button mat-button (click)="loginWithEmailAndPassword()">
+        Login With Email
+      </button>
+    </div>
+  </mat-card>
+
+  <div *ngIf="user.uid">
+    <p>すでにログインしています。uid: {{ user.uid }}</p>
+    <button (click)="logout()">ログアウト</button>
+  </div>
+</div>
