@@ -10,7 +10,7 @@ export class StoryComponent implements OnInit {
   message: Message = {
     sender: Math.random().toString(),
     text: "text",
-    time: "time"
+    time: { seconds: 1551347099 }
   };
   self = true;
 

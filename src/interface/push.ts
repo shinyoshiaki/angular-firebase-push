@@ -5,5 +5,5 @@ export interface pushMessage {
 export interface Message {
   sender: string;
   text: string;
-  time: any;
+  time: { seconds: number };
 }

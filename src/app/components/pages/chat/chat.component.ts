@@ -47,9 +47,12 @@ export class ChatComponent implements OnInit {
   }
 
   getMessages() {
-    const messages = [this.myMessages, this.targetMessages].reduce(
-      (acc, item) => acc.concat(item)
-    );
+    const messages = [this.myMessages, this.targetMessages]
+      .reduce((acc, item) => acc.concat(item))
+      .filter(msg => {
+        if (msg && msg.time && msg.time.seconds) return msg;
+      })
+      .sort((a, b) => a.time.seconds - b.time.seconds);
     this.messages = messages;
     console.log({ messages });
   }

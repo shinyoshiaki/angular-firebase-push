@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import { Message } from "../../src/interface/push";
 admin.initializeApp();
 
 export const fcmSend = functions.firestore
@@ -8,10 +9,11 @@ export const fcmSend = functions.firestore
     const articleInfo = snapshot.data();
     const body = JSON.stringify(articleInfo);
     console.log("body", body);
+    const { sender, text } = JSON.parse(body) as Message;
     const payload = {
       notification: {
-        title: "test",
-        body,
+        title: "nofitication",
+        body: `message "${text}" from ${sender}`,
         clickAction: "",
         icon: ""
       }
@@ -33,7 +35,11 @@ export const fcmSend = functions.firestore
               .messaging()
               .sendToDevice(token, payload)
               .then(res => {
-                console.log("Sent Successfully", res.results, payload.notification);
+                console.log(
+                  "Sent Successfully",
+                  res.results,
+                  payload.notification
+                );
               })
               .catch(err => {
                 console.log(err);
