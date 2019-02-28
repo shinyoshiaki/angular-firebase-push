@@ -5,7 +5,8 @@ import {
   MatButtonModule,
   MatCheckboxModule,
   MatInputModule,
-  MatCardModule
+  MatCardModule,
+  MatSnackBarModule
 } from "@angular/material";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -44,6 +45,7 @@ import { AsyncPipe } from "@angular/common";
     MatCheckboxModule,
     MatInputModule,
     MatCardModule,
+    MatSnackBarModule,
     AngularFireMessagingModule
   ],
   providers: [AngularFirestore, PushPermissionService, AsyncPipe],

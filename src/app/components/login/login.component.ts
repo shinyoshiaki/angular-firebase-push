@@ -41,18 +41,21 @@ export class LoginComponent implements OnInit {
     const credential = await this.angularFireAuth.auth.signInWithPopup(
       provider
     );
+    console.log({ credential });
   }
 
   async loginAnonymously() {
     const credential = await this.angularFireAuth.auth.signInAnonymously();
+    console.log({ credential });
   }
 
   async loginWithEmailAndPassword() {
     try {
-      const credential = await this.angularFireAuth.auth.createUserAndRetrieveDataWithEmailAndPassword(
+      const credential = await this.angularFireAuth.auth.createUserWithEmailAndPassword(
         this.email,
         this.password
       );
+      console.log({ credential });
     } catch (error) {
       if ((error.code = "auth/email-already-in-use")) {
         await this.angularFireAuth.auth.signInWithEmailAndPassword(
@@ -72,5 +75,6 @@ export class LoginComponent implements OnInit {
     const credential = await this.angularFireAuth.auth.currentUser.linkWithPopup(
       provider
     );
+    console.log({ credential });
   }
 }

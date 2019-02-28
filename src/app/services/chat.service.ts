@@ -31,11 +31,12 @@ export class ChatService {
   sendMessage(target: string, text: string) {
     if (this.uid) {
       const id = this.db.createId();
+      const sender = this.uid;
       this.collection
         .doc(target)
         .collection(this.uid)
         .doc(id)
-        .set({ text, id });
+        .set({ text, sender });
     }
   }
 

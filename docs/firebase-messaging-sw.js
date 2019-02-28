@@ -17,9 +17,10 @@ const messaging = firebase.messaging();
 messaging.setBackgroundMessageHandler(function(payload) {
   console.log("serviceworker recieved", payload);
 
-  const notificationTitle = payload.notification.title;
+  const notificationTitle = "notification";
+  const { sender, text } = payload.notification.body;
   const notificationOptions = {
-    body: payload.notification.body,
+    body: `message "${text}" from ${sender}`,
     icon: payload.notification.icon
   };
 
