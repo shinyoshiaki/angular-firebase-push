@@ -4,6 +4,8 @@ import {
   AngularFirestoreCollection
 } from "@angular/fire/firestore";
 import { AngularFireAuth } from "@angular/fire/auth";
+import * as firebase from "firebase";
+import "firebase/firestore";
 
 export interface Message {
   text: string;
@@ -32,11 +34,12 @@ export class ChatService {
     if (this.uid) {
       const id = this.db.createId();
       const sender = this.uid;
+      const time = firebase.firestore.FieldValue.serverTimestamp();
       this.collection
         .doc(target)
         .collection(this.uid)
         .doc(id)
-        .set({ text, sender });
+        .set({ text, sender, time });
     }
   }
 

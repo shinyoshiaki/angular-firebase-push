@@ -15,6 +15,7 @@ export class ChatComponent implements OnInit {
   uid: string;
   myMessages: Message[];
   targetMessages: Message[];
+  messages: Message[];
 
   constructor(
     private router: Router,
@@ -32,17 +33,24 @@ export class ChatComponent implements OnInit {
         this.chat
           .listenMyMessage(this.room)
           .subscribe((messages: Message[]) => {
-            console.log({ messages }, "my");
             this.myMessages = messages;
+            this.getMessages();
           });
         this.chat
           .listenTargetMessage(this.room)
           .subscribe((messages: Message[]) => {
-            console.log({ messages }, "target");
             this.targetMessages = messages;
+            this.getMessages();
           });
       }
     });
+  }
+
+  getMessages() {
+    const messages = [this.myMessages, this.targetMessages].reduce(
+      (acc, item) => acc.concat(item)
+    );
+    console.log({ messages });
   }
 
   send() {

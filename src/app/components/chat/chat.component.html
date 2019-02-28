@@ -4,16 +4,18 @@
     <p>target:{{ this.room }}</p>
     <div style="display: flex;justify-content: space-between">
       <div>
-        <p *ngFor="let message of myMessages">{{ message.text }}</p>
-      </div>
-      <div>
-        <p *ngFor="let message of targetMessages">{{ message.text }}</p>
+        <p *ngFor="let message of messages">{{ message.text }}</p>
       </div>
     </div>
   </div>
-  <div class="footer">
-    <mat-form-field>
-      <input matInput [(ngModel)]="text" placeholder="text" />
+  <div class="footer" style="display: flex">
+    <mat-form-field style="flex:1">
+      <input
+        matInput
+        [(ngModel)]="text"
+        placeholder="text"
+        autocomplete="off"
+      />
     </mat-form-field>
     <button mat-button (click)="send()">
       send

@@ -1,7 +1,3 @@
-<button (click)="logout()">ログアウト</button>
-<p>
-  {{ this.uid }}
-</p>
 <div style="display: flex;flex-direction: column">
   <button *ngFor="let user of users" mat-button (click)="openChat(user)">
     {{ user }}

@@ -30,7 +30,10 @@ export class UserListComponent implements OnInit {
       .collection("users")
       .snapshotChanges()
       .subscribe(
-        snapshot => (this.users = snapshot.map(item => item.payload.doc.id))
+        snapshot =>
+          (this.users = snapshot
+            .map(item => item.payload.doc.id)
+            .filter(id => id !== this.uid))
       );
   }
 

@@ -25,6 +25,7 @@ import { PushPermissionService } from "./services/push-permission.service";
 import { AngularFireMessagingModule } from "@angular/fire/messaging";
 import { AsyncPipe } from "@angular/common";
 import { MainComponent } from "./components/main/main.component";
+import { SettingsComponent } from "./components/settings/settings.component";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MainComponent } from "./components/main/main.component";
     LoginComponent,
     UserListComponent,
     ChatComponent,
-    MainComponent
+    MainComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
