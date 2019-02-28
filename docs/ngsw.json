@@ -11,7 +11,7 @@
         "/angular-firebase-push/favicon.ico",
         "/angular-firebase-push/firebase-messaging-sw.js",
         "/angular-firebase-push/index.html",
-        "/angular-firebase-push/main.d0f6adac1c6e19f5aad9.js",
+        "/angular-firebase-push/main.10f427c32d30ea89e088.js",
         "/angular-firebase-push/polyfills.407a467dedb63cfdd103.js",
         "/angular-firebase-push/runtime.a5dd35324ddfd942bef1.js",
         "/angular-firebase-push/styles.8d6217f60584bf214774.css"
@@ -47,9 +47,9 @@
     "/angular-firebase-push/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/angular-firebase-push/es2015-polyfills.4a4cfea0ce682043f4e9.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
     "/angular-firebase-push/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/angular-firebase-push/firebase-messaging-sw.js": "88ab339120f66a6b66c48a0add69e3eae3aa600d",
-    "/angular-firebase-push/index.html": "4ae43f98065fa5511f9c5f7a4a509209eb96df93",
-    "/angular-firebase-push/main.d0f6adac1c6e19f5aad9.js": "12a1fa5a02e8c1678cb1bb4a92df5395b0f77cd2",
+    "/angular-firebase-push/firebase-messaging-sw.js": "fb852feef5adb50a2173970cc56b042cf75eefa4",
+    "/angular-firebase-push/index.html": "be0611494931994b46cf6cdce74ae59ceedd08ac",
+    "/angular-firebase-push/main.10f427c32d30ea89e088.js": "fc89b34bb4f2a0079b35c3e02022930fb4c7d0d9",
     "/angular-firebase-push/polyfills.407a467dedb63cfdd103.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "/angular-firebase-push/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/angular-firebase-push/styles.8d6217f60584bf214774.css": "74d0a6e7c598f1b27d9f64ae6a38b6e6a6285b48"
