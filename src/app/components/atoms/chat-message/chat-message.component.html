@@ -1,3 +1,29 @@
-<p>
-  chat-message works!
-</p>
+<div
+  *ngIf="message"
+  style="border-radius: 10px;background: #F5F5F5;padding: 20px"
+>
+  <div *ngIf="self" style="display:flex">
+    <img [src]="avatar" style="padding-right:20px" />
+    <div>
+      <div style="display: flex;color:gray;">
+        <div style="padding-right: 10px">{{ message.sender }}</div>
+        <div>{{ getTime() }}</div>
+      </div>
+      <div>
+        {{ message.text }}
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!self" style="display:flex">
+    <div style="padding-right:20px">
+      <div style="display: flex;color:gray;">
+        <div style="padding-right: 10px">{{ message.sender }}</div>
+        <div>{{ getTime() }}</div>
+      </div>
+      <div>
+        {{ message.text }}
+      </div>
+    </div>
+    <img [src]="avatar" />
+  </div>
+</div>

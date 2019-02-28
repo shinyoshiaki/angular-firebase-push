@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.user.subscribe(u => {
       console.log({ u });
       if (u) {
-        this.router.navigate(["list"]);
+        this.router.navigate(["main"]);
       }
     });
   }

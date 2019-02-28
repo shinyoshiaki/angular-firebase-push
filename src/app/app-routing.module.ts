@@ -4,13 +4,15 @@ import { LoginComponent } from "./components/pages/login/login.component";
 import { MainComponent } from "./components/pages/main/main.component";
 import { UserListComponent } from "./components/pages/user-list/user-list.component";
 import { ChatComponent } from "./components/pages/chat/chat.component";
+import { StoryComponent } from "./components/debug/story/story.component";
 
 const routes: Routes = [
   { path: "", component: LoginComponent },
   { path: "main", component: MainComponent },
   { path: "login", component: LoginComponent },
   { path: "list", component: UserListComponent },
-  { path: "chat", component: ChatComponent }
+  { path: "chat", component: ChatComponent },
+  { path: "debug", component: StoryComponent }
 ];
 
 @NgModule({

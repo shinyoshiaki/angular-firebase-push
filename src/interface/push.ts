@@ -2,7 +2,8 @@ export interface pushMessage {
   notification: { body: string };
 }
 
-export interface pushBody {
+export interface Message {
   sender: string;
   text: string;
+  time: any;
 }

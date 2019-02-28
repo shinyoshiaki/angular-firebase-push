@@ -6,10 +6,7 @@ import {
 import { AngularFireAuth } from "@angular/fire/auth";
 import * as firebase from "firebase";
 import "firebase/firestore";
-
-export interface Message {
-  text: string;
-}
+import { Message } from "../../interface/push";
 
 @Injectable({
   providedIn: "root"

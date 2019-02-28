@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { PushPermissionService } from "./services/push-permission.service";
 import { MatSnackBar } from "@angular/material";
-import { pushMessage, pushBody } from "../interface/push";
+import { pushMessage, Message } from "../interface/push";
 
 @Component({
   selector: "app-root",
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     this.pushService.currentMessage.subscribe((msg: pushMessage) => {
       console.log(msg);
       if (msg) {
-        const { sender, text } = JSON.parse(msg.notification.body) as pushBody;
+        const { sender, text } = JSON.parse(msg.notification.body) as Message;
         this.snackBar.open(`message "${text}" from ${sender}`, "close", {
           duration: 5000
         });

@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AngularFireAuth } from "@angular/fire/auth";
-import { Message, ChatService } from "../../../services/chat.service";
+import { ChatService } from "../../../services/chat.service";
+import { Message } from "../../../../interface/push";
 
 @Component({
   selector: "app-chat",
@@ -51,6 +52,10 @@ export class ChatComponent implements OnInit {
     );
     this.messages = messages;
     console.log({ messages });
+  }
+
+  isSelf(message: Message) {
+    if (this.uid === message.sender) return true;
   }
 
   send() {

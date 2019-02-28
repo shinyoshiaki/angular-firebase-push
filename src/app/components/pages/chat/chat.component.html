@@ -4,7 +4,12 @@
     <p>target:{{ this.room }}</p>
     <div style="display: flex;justify-content: space-between">
       <div>
-        <p *ngFor="let message of messages">{{ message.text }}</p>
+        <app-chat-message
+          *ngFor="let message of messages"
+          [message]="message"
+          [self]="isSelf(message)"
+          style="margin:5px"
+        ></app-chat-message>
       </div>
     </div>
   </div>
