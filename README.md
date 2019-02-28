@@ -1,1 +1,1 @@
-https://shinyoshiaki.github.io/angular-push/
+https://shinyoshiaki.github.io/angular-firebase-push/
