@@ -17,15 +17,17 @@ import { environment } from "../environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { FormsModule } from "@angular/forms";
-import { LoginComponent } from "./components/login/login.component";
-import { UserListComponent } from "./components/user-list/user-list.component";
 import { AngularFirestore } from "@angular/fire/firestore";
-import { ChatComponent } from "./components/chat/chat.component";
 import { PushPermissionService } from "./services/push-permission.service";
 import { AngularFireMessagingModule } from "@angular/fire/messaging";
 import { AsyncPipe } from "@angular/common";
-import { MainComponent } from "./components/main/main.component";
-import { SettingsComponent } from "./components/settings/settings.component";
+import { LoginComponent } from "./components/pages/login/login.component";
+import { UserListComponent } from "./components/pages/user-list/user-list.component";
+import { ChatComponent } from "./components/pages/chat/chat.component";
+import { MainComponent } from "./components/pages/main/main.component";
+import { SettingsComponent } from "./components/pages/settings/settings.component";
+import { StoryComponent } from "./components/debug/story/story.component";
+import { ChatMessageComponent } from "./components/atoms/chat-message/chat-message.component";
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { SettingsComponent } from "./components/settings/settings.component";
     UserListComponent,
     ChatComponent,
     MainComponent,
-    SettingsComponent
+    SettingsComponent,
+    StoryComponent,
+    ChatMessageComponent
   ],
   imports: [
     BrowserModule,

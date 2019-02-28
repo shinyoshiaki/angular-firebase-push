@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AngularFireAuth } from "@angular/fire/auth";
-import { ChatService } from "../../services/chat.service";
-import { Message } from "../../services/chat.service";
+import { Message, ChatService } from "../../../services/chat.service";
 
 @Component({
   selector: "app-chat",
@@ -50,6 +49,7 @@ export class ChatComponent implements OnInit {
     const messages = [this.myMessages, this.targetMessages].reduce(
       (acc, item) => acc.concat(item)
     );
+    this.messages = messages;
     console.log({ messages });
   }
 
